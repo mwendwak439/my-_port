@@ -1,398 +1,403 @@
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Inter', 'Space Grotesk', sans-serif;
-            background: #0A0A0F;
-            color: #F0F3FA;
-            line-height: 1.6;
-            
-        }
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px;
-            width: 100%;
-            margin: 0 auto;
-             background-color: #551c2b;
-             position: fixed;
-             z-index: 1;
-             height: 30px;
-        }
+body {
+    font-family: 'Inter', 'Space Grotesk', sans-serif;
+    background: #0A0A0F;
+    color: #F0F3FA;
+    line-height: 1.6;
+}
 
-        nav h1 {
-            font-size: 25px;
-            font-weight: 700;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #551c2b;
+    position: fixed;
+    z-index: 1;
+}
 
-        }
+.name {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
 
-        nav ul {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            list-style: none;
-        }
-
-        nav ul li a {
-            color: #E0E0FF;
-            text-decoration: none;
-            font-weight: 500;
-            
-        }
-
-        nav ul li a:hover
-        {
-            color: #FF3366;
-        }
-
-        
-        #home {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding: 150px 40px;
-        }
-
-        .herosec {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 70px;
-            max-width: 1300px;
-            margin: 0 auto;
-          
-        }
-
-        .imagesec {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        
-
-        .profile {
-            width: 700px;
-            height: 700px;
-            object-fit: cover;
-            border-radius: 50%;
-           
-        }
-
-        .biosec {
-            flex: 1.2;
-            line-height: 50px;
-        }
-
+#hamburgerBtn {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
    
+}
 
-        .biosec h4 {
-            font-size: 30px;
-            color: #B0B0D0;
-            margin-bottom: 30px;
-        }
-        .details {
-             font-size: 30px;
-             font-weight: 900;
-
-        }
-
-       
-      
-
-        .bio-card {
-            background: rgba(20, 20, 35, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 1.2rem 1.5rem;
-            margin: 1.5rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .bio-card h4 {
-            color: #FF3366;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .bio-card p {
-            color: #C0C0E0;
-            line-height: 30px;
-            font-size: 15px;
-        }
-
+#hamburgerBtn span {
+    height: 4px;
+    background-color: white;
     
-        
-        #about {
-            padding: 5rem 5%;
-            background: linear-gradient(180deg, #0A0A0F 0%, #0F0F1A 100%);
-        }
+}
 
-        #about h1 {
-            text-align: center;
-            margin-bottom: 30px;
-              font-weight: 700;
-               font-size: 30px;
-        }
+#navmenu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    z-index: 99;
+ 
+}
 
+#navmenu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
 
-        .span-design{
-            color: #FF3366;
-        }
-
-        .title-line {
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(90deg, #FF3366, #FF9F4A);
-            margin: 0.5rem auto 0;
-            border-radius: 3px;
-        }
-
-        .aboutsec {
-            display: flex;
-            gap: 4rem;
-            max-width: 1300px;
-            margin: 0 auto;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
+#navmenu a:hover {
+    background-color: #FF3366;
     
-        #skills {
-            padding: 5rem 5%;
-            background: #0D0D14;
-        }
-        #skills h1{
-               
-               text-align: center;
-            margin-bottom: 30px;
-              font-weight: 700;
-               font-size: 30px;
-            
-        }
+}
 
-        .skillsec {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-        .skillsec img{
-         height: 150px;
-        }
-
-        .langu {
-            background: rgba(20, 20, 35, 0.6);
-            border-radius: 20px;
-            padding: 15px;
-            text-align: center;
-            border: 1px solid ;
-        }
+#navmenu.active {
+    display: block;
+}
 
 
-        .langu h4 {
-            margin-top: 10px;
-            font-size: 1.1rem;
-        }
-
-       
-        #contact {
-            padding: 5rem 5%;
-          
-        }
-        .section-title{
-            text-align: center;
-            margin-bottom: 30px;
-              font-weight: 700;
-               font-size: 30px;
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1300px;
-            margin: 0 auto 3rem;
-        }
-
-        .contact-card {
-            background: rgba(20, 20, 35, 0.6);
-            border-radius: 20px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            
-        }
-
-        .contact-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-card p {
-            color: #B0B0D0;
-            margin-bottom: 1rem;
-            word-break: break-all;
-        }
-
-       
-        .contactform {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(20, 20, 35, 0.6);
-            border-radius: 24px;
-            padding: 2rem;
-            border: 1px solid ;
-        }
-
-        .contactform h3 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            background: rgba(10, 10, 15, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 1rem;
-            color: white;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: #FF3366;
-            background: rgba(10, 10, 15, 1);
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #FF3366, #FF6B4A);
-            border: none;
-            padding: 1rem;
-            border-radius: 12px;
-            color: white;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-      
-      
-        footer {
-            background: #050508;
-            padding: 2rem 5%;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .footercontainer {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footercontainer p {
-            color: #888;
-            font-size: 0.85rem;
-        }
-
-        .footer-highlight {
-            color: #FF3366;
-            font-weight: 600;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .footer-links a {
-            color: #888;
-            text-decoration: none;
-            font-size: 0.85rem;
-            
-        }
-
-        .footer-links a:hover {
-            color: #FF3366;
-        }
-
-       
-        @media (max-width: 968px) {
-            .herosec {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .biosec {
-                text-align: center;
-            }
-            
-          
-            
-            .aboutsec {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                display: none;
-                position: absolute;
-              
-                left: 0;
-                width: 100%;
-                background: rgba(10, 10, 15, 0.98);
-                flex-direction: column;
-                padding: 1.5rem;
-                gap: 1rem;
-                text-align: center;
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            
-            
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            
-        }
-
-        @media (max-width: 480px) {
-            
-        
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-        }
+@media (min-width: 768px) {
+    #hamburgerBtn {
+        display: none;
+    }
+    
+    #navmenu {
+        display: block ;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+    
+    #navmenu ul {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
   
+    #navmenu a {
+        display: inline-block;
+        padding: 0;
+    }
+    
+    #navmenu a:hover {
+        background-color: transparent;
+        padding-left: 0;
+        color: #FF3366;
+    }
+}
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 150px 40px;
+}
+
+.herosec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.imagesec {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.biosec {
+    flex: 1.2;
+    line-height: 50px;
+}
+
+.biosec h4 {
+    font-size: 30px;
+    color: #B0B0D0;
+    margin-bottom: 30px;
+}
+
+.details {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.bio-card {
+    background: rgba(20, 20, 35, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bio-card h4 {
+    color: #FF3366;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.bio-card p {
+    color: #C0C0E0;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#about {
+    padding: 5rem 5%;
+    background: linear-gradient(180deg, #0A0A0F 0%, #0F0F1A 100%);
+}
+
+#about h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.span-design {
+    color: #FF3366;
+}
+
+.aboutsec {
+    display: flex;
+    gap: 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#skills {
+    padding: 5rem 5%;
+    background: #0D0D14;
+}
+
+#skills h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.skillsec {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.skillsec img {
+    height: 150px;
+    width: auto;
+}
+
+.langu {
+    background: rgba(20, 20, 35, 0.6);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.langu h4 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+#contact {
+    padding: 5rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto 3rem;
+}
+
+.contact-card {
+    background: rgba(20, 20, 35, 0.6);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    color: #B0B0D0;
+    margin-bottom: 1rem;
+    word-break: break-all;
+}
+
+.contactform {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(20, 20, 35, 0.6);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contactform h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: rgba(10, 10, 15, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #FF3366;
+    background: rgba(10, 10, 15, 1);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #FF3366, #FF6B4A);
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+footer {
+    background: #050508;
+    padding: 2rem 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footercontainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footercontainer p {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.footer-highlight {
+    color: #FF3366;
+    font-weight: 600;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: #FF3366;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .herosec {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .biosec {
+        text-align: center;
+    }
+    
+    .aboutsec {
+        flex-direction: column;
+    }
+    
+    .profile {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .details {
+        font-size: 24px;
+    }
+    
+    .biosec h4 {
+        font-size: 24px;
+    }
+}
